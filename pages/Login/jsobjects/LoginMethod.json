@@ -1,0 +1,25 @@
+{
+  "unpublishedCollection": {
+    "name": "LoginMethod",
+    "pageId": "Login",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "actions": [],
+    "archivedActions": [],
+    "body": "export default {\n\tmyVar1: [],\n\tmyVar2: {},\n\tmyFun1: () => {\n\t\t//write code here\n\t\tLoginSelect.run()\n\t\tvar datos = LoginSelect.data;\n    for (let clave in datos){\n\t\t\t let rolId= datos[clave].id_rol; \n\t\t\t if(rolId == 1){\n\t\t\t\t   navigateTo('Admin',{}, 'SAME_WINDOW')\n\t\t\t }else{\n\t\t\t\t   navigateTo('User',{}, 'SAME_WINDOW')\n\t\t\t }\n\t\t\t storeValue(\"usuario\",datos[clave])\n    }\n\t  \n\t},\n\tmyFun2: async () => {\n\t\t//use async-await or promises\n\t}\n}",
+    "variables": [
+      {
+        "name": "myVar1",
+        "value": "[]"
+      },
+      {
+        "name": "myVar2",
+        "value": "{}"
+      }
+    ],
+    "userPermissions": []
+  },
+  "id": "Login_LoginMethod",
+  "deleted": false,
+  "gitSyncId": "637ecacb50a0410f102d18b8_6380e25bfa57b54aac1bb8c3"
+}
